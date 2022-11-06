@@ -25,8 +25,8 @@ function populateTextarea() {
   let saveData = JSON.parse(localStorage.getItem(STORAGE_KEY));
 
   if (saveData) {
-    refs.form.email.value = saveData.email;
-    refs.form.message.value = saveData.message;
+    refs.form.email.value = saveData.email || [];
+    refs.form.message.value = saveData.message || [];
   }
 }
 
